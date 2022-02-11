@@ -25,3 +25,22 @@ Constraints:
 0 <= n <= 37
 The answer is guaranteed to fit within a 32-bit integer, ie. answer <= 2^31 - 1.
 */
+
+class Solution {
+public:
+    int tribonacci(int n) {
+        
+        unsigned int a, b, c, d;
+        
+        a = 0, b = 1, c = 1;
+        
+        while (n--) {
+            d = a + b + c;
+            a = b;
+            b = c;
+            c = d;
+        }
+        return a;
+        
+    }
+};
